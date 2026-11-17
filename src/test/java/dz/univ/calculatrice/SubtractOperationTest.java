@@ -21,4 +21,9 @@ class SubtractOperationTest {
     void shouldSubtractDecimalNumbers() {
         assertEquals(1.5, operation.execute(3.75, 2.25), 0.0001);
     }
+
+    @Test
+    void shouldReturnZeroWhenSubtractingEqualNumbers() {
+        assertEquals(0.0, operation.execute(5.0, 5.0), 0.0001);
+    }
 }
